@@ -38,14 +38,9 @@ def loadbuttonhandler():
    if portnum <0 or portnum >100: allgood = False
    if allgood:
       portstr = "-PCOM" + str(portnum)
-      execstr ="avrdudinocmd.bat" + " " + pathstr + " " + pcbstr + " " + portstr
-      #print(execstr)
-      os.system("cd " + AVRdudinopath)
+      execstr ="avrdudinocmd.bat" + " " + '''"''' + pathstr + '''"''' + " " + pcbstr + " " + portstr
+      print(execstr)
       os.system(execstr)
-
-   
-   
-
 root = tk.Tk()
 root.iconbitmap('AVRdudino.ico')
 #statusbar = ttk.Label(root, text="", relief=tk.SUNKEN, anchor=tk.W)
